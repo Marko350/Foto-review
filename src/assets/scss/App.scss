@@ -1,0 +1,65 @@
+@import "bootstrap/scss/bootstrap";
+@import "dropzone";
+@import "masonry";
+
+.albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+.nav {
+    margin-bottom: 1rem;
+}
+
+.create-album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.album-icon {
+    cursor: pointer;
+}
+
+.album-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.album-name-change {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.review-link {
+    padding: 0.5rem;
+    border: 2px dashed black;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
+
+.photo-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 576px) {
+    .albums {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+@media only screen and (min-width: 1200px) {
+    .albums {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+}
