@@ -14,6 +14,7 @@ const AlbumsGrid = () => {
                 <div  key={index}>
                     <FontAwesomeIcon onClick={() => { navigate(`/albums/${album.id}`)}} className="album-icon" icon={faFolder} size="6x" />
                     <h1>{album.name}</h1>
+                    {album.reviewedBy ? <span>Reviewed by: {album.reviewedBy}</span> : null}
                 </div>
             ))}
         </div>

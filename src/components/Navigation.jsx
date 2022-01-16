@@ -20,7 +20,7 @@ const Navigation = () => {
       sticky="top"
     >
       <Container style={{ maxWidth: "1200px" }}>
-        <Link to={currentUser ? "/albums" : "/login"} className="navbar-brand">
+        <Link to={currentUser ? "/albums" : "/"} className="navbar-brand">
           <span className="brand" role="img">
             Foto Review
           </span>
@@ -33,13 +33,13 @@ const Navigation = () => {
                     <Nav.Link to={"/albums"} as={Link} className="ms-4" eventKey="1">
                         <span>My albums</span>
                     </Nav.Link>
-                    <Nav.Link to={"/login"} as={Link} className="ms-4" eventKey="2">
+                    <Nav.Link to={"/"} as={Link} className="ms-4" eventKey="2">
                         <span onClick={logOut}>Log Out</span>
                     </Nav.Link>
                 </> :
 
                 <>
-                    <Nav.Link to={"/login"} as={Link} className="ms-4" eventKey="1">
+                    <Nav.Link to={"/"} as={Link} className="ms-4" eventKey="1">
                         <span>Login</span>
                     </Nav.Link>
                     <Nav.Link to={"/register"} as={Link} className="ms-4" eventKey="2">

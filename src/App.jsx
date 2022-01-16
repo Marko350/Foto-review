@@ -16,18 +16,18 @@ function App() {
     <div>
         <Navigation />
         <Routes>
-            <Route path="/login" element={ <Login /> } />
+            <Route path="/" element={ <Login /> } />
             <Route path="/register" element={ <Register /> } />
             <Route path="/forgot-password" element={ <ForgotPasswordPage /> } />
             <Route path="/review/:owner/:id" element={ <Review /> } />
 
             <Route path="/albums" element={
-                <RouteGuard redirectTo="/login">
+                <RouteGuard redirectTo="/">
                     <Albums />
                 </RouteGuard>
                 } />
             <Route path="/albums/:id" element={
-                <RouteGuard redirectTo="login">
+                <RouteGuard redirectTo="/">
                     <Album />
                 </RouteGuard>
                 } />

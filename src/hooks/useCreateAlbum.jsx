@@ -20,7 +20,7 @@ const useCreateAlbum = () => {
       } 
 
     
-    const createAlbum = async ( albumName, owner = null, original = true , photos = [], reviewedBy = null, thumbnail = null) => {
+    const createAlbum = async ( albumName, owner = null, photos = [], reviewedBy = null, thumbnail = null ) => {
         const collectionRef = collection(db, "albums");
         try {
             
@@ -29,8 +29,6 @@ const useCreateAlbum = () => {
                 name: albumName,
                 owner: !owner ? currentUser.uid : owner,
                 thumbnail,
-                original,
-                viewed: original ? true : false,
                 reviewedBy,
             })
 
@@ -38,10 +36,8 @@ const useCreateAlbum = () => {
                 await addAlbumToPhotos(newAlbum.id, photos)
             }
 
-            console.log("New folder is created")
             return newAlbum
         } catch (e) {
-            console.log("Error! New folder was not created.")
             console.log(e.message)
         }
     }  

@@ -20,7 +20,7 @@ const CreateAlbum = ({ title, album}) => {
                 return
             }
             //create album from previous album
-            const newAlbum =  await createAlbum(inputRef.current.value, album.owner, true, chosenPhotos, null, album.thumbnail)
+            const newAlbum =  await createAlbum(inputRef.current.value, album.owner, chosenPhotos, null, album.thumbnail )
             inputRef.current.value = "";
             navigate(`/albums/${newAlbum.id}`)
             return

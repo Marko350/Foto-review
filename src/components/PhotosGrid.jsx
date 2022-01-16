@@ -10,7 +10,8 @@ const masonryBreakpoints = {
 	992: 4,
 }
 
-const PhotosGrid = ({ query }) => {
+const PhotosGrid = ({ query, review }) => {
+
     return (
         <SRLWrapper>
             <Masonry
@@ -19,7 +20,7 @@ const PhotosGrid = ({ query }) => {
 				columnClassName="photos-masonry-column"
             >
                 {query.data && query.data.map( (photo, index) => (
-                    <PhotoCard key={index} photo={photo} />
+                    <PhotoCard key={index} photo={photo} review={review} />
                 )) }
             </Masonry>
         </SRLWrapper>

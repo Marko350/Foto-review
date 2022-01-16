@@ -14,7 +14,6 @@ const ForgotPasswordPage = () => {
 		} catch (error){
 			console.log(error);
 		}
-
 		inputRef.current.value = "";
 	}
 

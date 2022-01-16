@@ -1,8 +1,6 @@
 import React, { useCallback } from 'react'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { useDropzone } from 'react-dropzone'
-import { collectionGroup, doc, collection, getDocs, query, where, updateDoc, deleteField } from 'firebase/firestore'
-import { db } from '../firebase'
 import useUploadPhoto from '../hooks/useUploadPhoto'
 
 const UploadPhotos = ({ id }) => {
